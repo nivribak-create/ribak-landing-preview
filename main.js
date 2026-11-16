@@ -13,6 +13,15 @@
   var params = new URLSearchParams(location.search);
   // ?demo=1 shows the thank-you state without sending anything, for previews.
   var DEMO = params.get('demo') === '1';
+  // A preview link looks exactly like the real page, so it says out loud
+  // that nothing typed into it reaches the CRM.
+  if (DEMO) {
+    var note = document.createElement('p');
+    note.textContent = 'מצב בדיקה: מה שממלאים כאן לא נשלח ל-CRM.';
+    note.setAttribute('role', 'status');
+    note.style.cssText = 'margin:0;padding:8px 16px;background:#e5a93a;color:#0e3b2c;font-weight:800;font-size:15px;text-align:center;position:sticky;top:0;z-index:30';
+    document.body.insertBefore(note, document.body.firstChild);
+  }
 
   // ---- time in Israel, wherever the visitor's phone thinks it is ----------
   function israelNow() {
