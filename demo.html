@@ -1,0 +1,325 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>RIBAK | דמו</title>
+<meta name="description" content="ארוחות טעימות ומוכנות לנשים עסוקות, טריות, לכל השבוע. ביום ראשון זה מגיע עד פתח הבית שלך.">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#0e3b2c">
+<meta property="og:title" content="RIBAK | ארוחות טעימות ומוכנות לנשים עסוקות">
+<meta property="og:description" content="טריות, לכל השבוע. ביום ראשון זה מגיע עד פתח הבית שלך.">
+<meta property="og:image" content="assets/og.jpg">
+<meta property="og:type" content="website">
+<link rel="icon" href="assets/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Assistant:wght@400;600;800&family=Karantina:wght@700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="demo.css">
+</head>
+<body>
+
+<a class="skip" href="#start">דלגי לטופס</a>
+
+<main>
+
+<!-- ============ פתיחה: הדף מתחיל ישר מהירוק ============ -->
+<section class="hero">
+  <div class="wrap hero__in">
+    <div class="hero__lead">
+      <p class="brand">RIBAK</p>
+      <button class="adq" type="button" data-adq hidden>
+        <img class="adq__img" data-adq-img alt="" width="56" height="56">
+        <span class="adq__body"><span class="adq__q" data-adq-q></span><span class="adq__src" data-adq-src></span></span>
+        <svg class="adq__play" viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M10 8.5v7l6-3.5z"/></svg>
+      </button>
+      <h1>ארוחות טעימות ומוכנות לנשים עסוקות<span>טריות, לכל השבוע.</span></h1>
+      <p class="hero__sub">ביום ראשון זה מגיע עד פתח הבית שלך. כשתי דקות בתוך הקופסה (כן, מחממים בקופסה). בריא, ואת לא צריכה לדאוג לכלום.</p>
+    </div>
+
+    <form class="tag flow" id="start" data-lead data-flow novalidate>
+      <div class="tag__body">
+        <p class="flow__n" data-flow-n>1 מתוך 3</p>
+
+        <div class="flow__step" data-step="1">
+          <h2 class="flow__q">כמה ארוחות שיחכו לך במקרר?</h2>
+          <div class="flow__opts flow__opts--3">
+            <button type="button" data-count="3"><b>3</b><span>ארוחות</span></button>
+            <button type="button" data-count="5"><b>5</b><span>ארוחות</span></button>
+            <button type="button" data-count="7"><b>7</b><span>ארוחות</span></button>
+          </div>
+        </div>
+
+        <div class="flow__step" data-step="2" hidden>
+          <h2 class="flow__q">מה את אוהבת לאכול?</h2>
+          <div class="flow__opts flow__opts--2">
+            <button type="button" data-like="עוף" aria-pressed="false"><img src="assets/dishes/chicken-dijon.jpg" alt="" width="800" height="534"><span>עוף</span></button>
+            <button type="button" data-like="דגים" aria-pressed="false"><img src="assets/dishes/salmon.jpg" alt="" width="800" height="534"><span>דגים</span></button>
+            <button type="button" data-like="בקר" aria-pressed="false"><img src="assets/dishes/beef-ragu.jpg" alt="" width="800" height="534"><span>בקר</span></button>
+            <button type="button" data-like="טופו" aria-pressed="false"><img src="assets/dishes/tofu-curry.jpg" alt="" width="800" height="534"><span>טופו</span></button>
+          </div>
+          <button class="btn" type="button" data-next disabled>להמשיך</button>
+          <button class="flow__back" type="button" data-back>חזרה</button>
+        </div>
+
+        <div class="flow__step" data-step="3" hidden>
+          <h2 class="flow__q" data-week-title>השבוע שלך</h2>
+          <ul class="week" data-week></ul>
+          <label class="field">
+            <span class="field__label">שם</span>
+            <input type="text" name="name" autocomplete="given-name" autocapitalize="words" enterkeyhint="next" maxlength="60" required>
+          </label>
+          <label class="field">
+            <span class="field__label">טלפון נייד</span>
+            <input type="tel" name="phone" inputmode="tel" autocomplete="tel" enterkeyhint="send" dir="ltr" placeholder="05X-XXXXXXX" maxlength="16" required>
+          </label>
+          <input type="hidden" name="flow_note" value="">
+          <label class="trap" aria-hidden="true">אין למלא<input type="text" name="rbk_check" tabindex="-1" autocomplete="off" data-lpignore="true" data-1p-ignore></label>
+          <p class="tag__error" role="alert" hidden></p>
+          <button class="btn" type="submit">אני רוצה לנסות את השבוע הזה</button>
+          <p class="tag__fine">*משלוחים מאשדוד עד נתניה. את המנות נסגור יחד בטלפון. <a href="https://www.ribakfood.co.il/privacy" target="_blank" rel="noopener">מדיניות פרטיות</a></p>
+          <button class="flow__back" type="button" data-back>חזרה</button>
+        </div>
+      </div>
+      <div class="tag__done" aria-live="polite" hidden>
+        <p class="stamp" aria-hidden="true">נרשם ✓</p>
+        <p class="tag__thanks" data-thanks></p>
+        <p data-thanks-when></p>
+        <div class="tag__wa" data-wa>
+          <p>רוצה לקבל מאיתנו גם עדכונים והטבות בוואטסאפ?</p>
+          <button class="btn btn--line" type="button" data-wa-yes>כן, שלחו לי</button>
+        </div>
+      </div>
+    </form>
+
+    <div class="known">
+      <p>כבר אוכלים RIBAK</p>
+      <div class="known__row">
+        <figure><img src="assets/faces/nadir.jpg" alt="" width="160" height="160"><figcaption>נדיר אליהו</figcaption></figure>
+        <figure><img src="assets/faces/danit.jpg" alt="" width="160" height="160"><figcaption>דנית גרינברג</figcaption></figure>
+        <figure><img src="assets/faces/moran.jpg" alt="" width="160" height="160"><figcaption>מורן שטרום</figcaption></figure>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ המנות, ואיך זה מגיע ============ -->
+<section class="menu" aria-labelledby="menu-h">
+  <div class="wrap">
+    <h2 id="menu-h">חלק קטן מהמנות שיש לנו</h2>
+    <p class="lead">אין יותר חזה עוף יבש ואורז בלי טעם.</p>
+  </div>
+  <div class="dishes" tabindex="0" role="region" aria-label="מנות מהתפריט, אפשר לגלול הצידה">
+    <article class="dish">
+      <img src="assets/dishes/chicken-dijon.jpg" alt="חזה עוף בזיגוג חרדל ודבש עם אורז לבן ואנטיפסטי" width="800" height="534" loading="lazy">
+      <h3>חזה עוף ״דיז׳ון״ ודבש</h3>
+      <p class="dish__nums"><span><b>551</b> קלוריות</span><span><b>55.9</b> גר׳ חלבון</span></p>
+    </article>
+    <article class="dish">
+      <img src="assets/dishes/salmon.jpg" alt="סלמון בקראסט עשבים עם תפוחי אדמה, בטטה ושעועית ירוקה" width="800" height="534" loading="lazy">
+      <h3>סלמון בקראסט עשבים</h3>
+      <p class="dish__nums"><span><b>535</b> קלוריות</span><span><b>38.2</b> גר׳ חלבון</span></p>
+    </article>
+    <article class="dish">
+      <img src="assets/dishes/wok.jpg" alt="ווק עוף תאילנדי עם אטריות שעועית וירקות" width="794" height="800" loading="lazy">
+      <h3>ווק עוף תאילנדי</h3>
+      <p class="dish__nums"><span><b>526</b> קלוריות</span><span><b>43</b> גר׳ חלבון</span></p>
+    </article>
+    <article class="dish">
+      <img src="assets/dishes/chicken-meatballs.jpg" alt="קציצות עוף ברוטב אדום עם פסטה ושעועית ירוקה" width="800" height="534" loading="lazy">
+      <h3>קציצות עוף ברוטב אדום</h3>
+      <p class="dish__nums"><span><b>496</b> קלוריות</span><span><b>51.4</b> גר׳ חלבון</span></p>
+    </article>
+    <article class="dish">
+      <img src="assets/dishes/pargit-yellow-curry.jpg" alt="פרגית בקארי צהוב עם אורז לבן ושעועית ירוקה" width="800" height="534" loading="lazy">
+      <h3>פרגית ״ילו קארי״</h3>
+      <p class="dish__nums"><span><b>596</b> קלוריות</span><span><b>38.3</b> גר׳ חלבון</span></p>
+    </article>
+    <article class="dish">
+      <img src="assets/dishes/bolognese-chicken.jpg" alt="בולונז עוף על פסטה עם אנטיפסטי" width="800" height="534" loading="lazy">
+      <h3>בולונז עוף ״קלסיקו״</h3>
+      <p class="dish__nums"><span><b>501</b> קלוריות</span><span><b>51</b> גר׳ חלבון</span></p>
+    </article>
+  </div>
+  <div class="wrap">
+    <p class="menu__more">ועוד בתפריט: פרגית בגלייז BBQ, פילה לברק ושרי, קבב ״שוק״, קציצות דג ים פיקנטיות, ראגו בקר, טופו ״גרין קארי״ וסלט ניסואז.</p>
+
+    <h3 class="arrive__h">וככה זה מגיע אלייך</h3>
+    <div class="arrive">
+      <img src="assets/real/bag.jpg" alt="שקית צידנית שחורה של RIBAK עם מדבקה" width="540" height="675" loading="lazy">
+      <img src="assets/real/box-stack.jpg" alt="שלוש קופסאות שחורות של RIBAK אחת על השנייה" width="540" height="675" loading="lazy">
+      <img src="assets/real/box-open.jpg" alt="קופסה פתוחה של RIBAK עם מנה מוכנה" width="540" height="675" loading="lazy">
+    </div>
+  </div>
+</section>
+
+<!-- ============ הלקוחות ============ -->
+<section class="voices" aria-labelledby="voices-h">
+  <div class="wrap">
+    <h2 id="voices-h">בואי תכירי לקוחות שלנו</h2>
+  </div>
+  <div class="reels" tabindex="0" role="region" aria-label="שבעה סרטונים, אפשר לגלול הצידה">
+    <figure>
+      <video controls playsinline preload="none" poster="assets/video/story-5.jpg" width="540" height="960" aria-label="נדיר אליהו: זה החיים לפני והחיים אחרי">
+        <source src="assets/video/story-5.mp4" type="video/mp4">
+      </video>
+      <figcaption><b>נדיר אליהו</b><span>בלוגר אופנה</span></figcaption>
+    </figure>
+    <figure>
+      <video controls playsinline preload="none" poster="assets/video/story-2.jpg" width="540" height="960" aria-label="דנית גרינברג: כולם התעלפו על האוכל">
+        <source src="assets/video/story-2.mp4" type="video/mp4">
+      </video>
+      <figcaption><b>דנית גרינברג</b><span>״האח הגדול״, ״המרוץ למיליון״</span></figcaption>
+    </figure>
+    <figure>
+      <video controls playsinline preload="none" poster="assets/video/story-3.jpg" width="540" height="960" aria-label="מורן שטרום: בדקנו את הטעמים, המחירים וחומרי הגלם">
+        <source src="assets/video/story-3.mp4" type="video/mp4">
+      </video>
+      <figcaption><b>מורן שטרום</b><span>נטורופתית</span></figcaption>
+    </figure>
+    <figure>
+      <video controls playsinline preload="none" poster="assets/video/story-4.jpg" width="540" height="960" aria-label="מעיין שריג: זה גם נראה ממש טעים">
+        <source src="assets/video/story-4.mp4" type="video/mp4">
+      </video>
+      <figcaption><b>מעיין שריג</b><span>סמנכ״לית במטא ישראל</span></figcaption>
+    </figure>
+    <figure>
+      <video controls playsinline preload="none" poster="assets/video/story-1.jpg" width="540" height="960" aria-label="כל יום ראשון אני מקבלת את הארוחות לכל השבוע">
+        <source src="assets/video/story-1.mp4" type="video/mp4">
+      </video>
+    </figure>
+    <figure>
+      <video controls playsinline preload="none" poster="assets/video/ugc-2.jpg" width="540" height="960" aria-label="חלום שמישהו יבשל לנו לכל השבוע">
+        <source src="assets/video/ugc-2.mp4" type="video/mp4">
+      </video>
+    </figure>
+    <figure>
+      <video controls playsinline preload="none" poster="assets/video/ugc-1.jpg" width="540" height="960" aria-label="הקופסה, המדבקה והערכים שעליה">
+        <source src="assets/video/ugc-1.mp4" type="video/mp4">
+      </video>
+    </figure>
+  </div>
+  <!-- צילומי מסך של המלצות: להוסיף כאן כשיגיעו לתיקייה assets/reviews -->
+</section>
+
+<!-- ============ שאלות ============ -->
+<section class="qa" aria-labelledby="qa-h">
+  <div class="wrap qa__in">
+    <h2 id="qa-h">שאלות שהרבה שואלות</h2>
+
+    <article class="q">
+      <h3>כבר ניסיתי אוכל מוכן והוא לא היה טעים. למה שכאן יהיה אחרת?</h3>
+      <p class="q__by">ניב ריבק עונה:</p>
+      <p>אני מכיר את האוכל הזה: חזה עוף יבש ואורז בלי טעם. הקמתי את RIBAK כדי שאוכל בריא יהיה גם טעים.</p>
+      <p>אני שף מגיל 16. את התפריט ואת המתכונים אני בונה בעצמי, ומנה לא נכנסת לתפריט לפני שהיא טעימה לי. מבשלים בשמן זית בלבד, בלי שמני זרעים ובלי חומרים משמרים, במטבח יצרן עם רישיון משרד הבריאות.</p>
+      <p>אין סיבה שתאמיני לי לפני שטעמת. אם תהיה מנה שלא אהבת, תכתבי לנו: נזכה אותך עליה או נחליף אותה.</p>
+    </article>
+
+    <article class="q">
+      <h3>איך אוכל מיום ראשון מחזיק לי את השבוע?</h3>
+      <p>מיד אחרי הבישול כל מנה עוברת קירור מהיר (Blast Chilling): מ־70 מעלות ל־4 מעלות בפחות משעה. במקרר ביתי אותה ירידה לוקחת שעות, ובזמן הזה האוכל מאבד מהטריות שלו.</p>
+      <p>בגלל הקירור הזה אין צורך בחומרים משמרים, והלקוחות שלנו אוכלות את המנות לאורך השבוע.</p>
+    </article>
+
+    <article class="q">
+      <h3>זה אוכל דיאטה? אני אשאר רעבה?</h3>
+      <p>אלה ארוחות בגודל של ארוחה: חלבון, פחמימה וירק בכל קופסה. ברוב מנות העוף והדגים יש 38 עד 56 גרם חלבון, והחלבון הוא מה שהכי משביע בצלחת.</p>
+      <p>במנה יש בין 430 ל־630 קלוריות, והמספר המדויק כתוב על כל קופסה. אין כאן הבטחה על המשקל. יש ארוחה מסודרת שאת יודעת בדיוק מה יש בה, בלי לשקול ובלי לחשב.</p>
+      <p>רוצה יותר? אפשר להוסיף קופסאות של חצי קילו: חלבון, תוספת או ירק.</p>
+    </article>
+
+    <article class="q">
+      <h3>מה אם אני לא בבית ביום ראשון בבוקר?</h3>
+      <p>לא צריך להיות. המשלוח מגיע בין 07:00 ל־10:00, ארוז בשקית עם קרחון, ומחכה לך ליד הדלת.</p>
+      <p>אם נוח לך יותר, אפשר לתאם מראש כתובת אחרת, למשל המשרד.</p>
+    </article>
+
+    <details>
+      <summary>כמה זה עולה?</summary>
+      <p>מחיר מנה נע בין <span class="nw">59 ₪</span> ל־<span class="nw">99 ₪</span>, לפי המנה. ניקח שבוע של 4 מנות עיקריות ב־<span class="nw">69 ₪</span>: <span class="nw">276 ₪</span> על המנות ועוד <span class="nw">55 ₪</span> משלוח, <span class="nw">331 ₪</span>. דמי המשלוח נשארים <span class="nw">55 ₪</span> גם אם הזמנת 6 מנות, והמינימום להזמנה הוא <span class="nw">200 ₪</span>. מנויה קבועה מקבלת 5% הנחה על כל הזמנה.</p>
+    </details>
+    <details>
+      <summary>אפשר לשנות רכיבים בתוך מנה?</summary>
+      <p>לא. כל מנה נבנית ונשקלת כהרכב אחד, וזה מה שמאפשר לנו לכתוב עליה ערכים תזונתיים מדויקים ולשמור על אותו טעם בכל שבוע. את בוחרת אילו מנות יגיעו אלייך, ואם חסר לך משהו אפשר להוסיף קופסאות של חצי קילו של חלבון, תוספת או ירק.</p>
+    </details>
+    <details>
+      <summary>איך מדלגים על שבוע או עוצרים?</summary>
+      <p>בפורטל המנויות, עד יום רביעי ב־23:00. לפני כן נשלחת אלייך הודעת תזכורת, כך שלא יוצא משלוח שלא רצית.</p>
+    </details>
+    <details>
+      <summary>יש לי אלרגיה או רגישות למזון.</summary>
+      <p>חשוב שתדעי: המטבח שלנו לא מותאם לאלרגיות ואינו נקי מאלרגנים. אם יש לך אלרגיה או רגישות, ספרי לנו בשיחה לפני שמזמינים.</p>
+    </details>
+    <details>
+      <summary>לאן אתם מגיעים?</summary>
+      <p>לכל האזור שבין אשדוד לנתניה, ולא מזרחית מראש העין. אם את לא בטוחה שהכתובת שלך בפנים, השאירי פרטים ונבדוק.</p>
+    </details>
+  </div>
+</section>
+
+<!-- ============ איך זה עובד ============ -->
+<section class="steps" aria-labelledby="steps-h">
+  <div class="wrap">
+    <h2 id="steps-h">מהרגע שהשארת פרטים ועד שהמקרר מלא</h2>
+    <ol class="steps__list">
+      <li>
+        <h3>משאירה שם וטלפון</h3>
+        <p>מישהו מהצוות שלנו חוזר אלייך, בשעה שנוח לך לדבר.</p>
+      </li>
+      <li>
+        <h3>מדברים כ־10 דקות בטלפון</h3>
+        <p>שואלים מה את אוכלת היום ומה היית רוצה שישתנה, ובוחרים יחד את המנות לשבוע הראשון.</p>
+      </li>
+      <li>
+        <h3>יום ראשון בבוקר, המשלוח בדלת</h3>
+        <p>בין 07:00 ל־10:00 מגיעות כל המנות של השבוע. כשתי דקות במיקרוגל, בתוך הקופסה, ויש ארוחה.</p>
+      </li>
+      <li>
+        <h3>אחרי שטעמת, מחליטים יחד</h3>
+        <p>מתקשרים לשמוע איך היה. אם ממשיכים, מנויה קבועה מקבלת 5% הנחה על כל הזמנה, ויכולה לדלג על שבוע עד יום רביעי ב־23:00.</p>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<!-- ============ ההצעה ============ -->
+<section class="final" id="call" aria-labelledby="final-h">
+  <div class="wrap final__in">
+    <div class="final__copy">
+      <h2 id="final-h">בואי תנסי אותנו לשבוע אחד</h2>
+      <p>נדבר, תעשי הזמנה לשבוע אחד, ותראי אם זה מתאים לך.</p>
+    </div>
+
+    <a class="btn" href="#start">בואי נבנה את השבוע שלך</a>
+  </div>
+</section>
+
+</main>
+
+<footer class="foot">
+  <p class="demo-note">זה דמו. שום דבר שממלאים כאן לא נשלח.</p>
+  <div class="wrap foot__in">
+    <p>ריבק, עוסק מספר 319126512. אצ״ל 6, ראשון לציון.</p>
+    <p class="foot__links">
+      <a href="https://www.ribakfood.co.il/terms" target="_blank" rel="noopener">תקנון</a>
+      <a href="https://www.ribakfood.co.il/privacy" target="_blank" rel="noopener">מדיניות פרטיות</a>
+      <a href="https://www.ribakfood.co.il/accessibility" target="_blank" rel="noopener">הצהרת נגישות</a>
+      <a href="https://www.instagram.com/ribak.food/" target="_blank" rel="noopener">אינסטגרם</a>
+    </p>
+  </div>
+</footer>
+
+<a class="dock" href="#start" data-dock>
+  <span>שבוע אחד, בלי התחייבות</span>
+  <strong>אני רוצה לנסות</strong>
+</a>
+
+<dialog class="player" data-player aria-label="הסרטון מהמודעה">
+  <button class="player__x" type="button" data-player-close aria-label="סגירת הסרטון">סגירה</button>
+  <div data-player-slot></div>
+</dialog>
+
+<script src="demo.js" defer></script>
+</body>
+</html>

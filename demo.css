@@ -1,0 +1,73 @@
+/* RIBAK demo: the first form becomes three taps. Loaded after styles.css; the live page does not use it. */
+.flow__n { margin-bottom: 4px; text-align: center; font-size: 0.875rem; color: var(--muted); }
+.flow__q {
+  margin-bottom: 12px;
+  font-family: var(--text);
+  font-weight: 800;
+  font-size: 1.375rem;
+  line-height: 1.25;
+  color: var(--ink);
+  text-align: center;
+}
+.flow__opts { display: grid; gap: 10px; margin-bottom: 12px; }
+.flow__opts--3 { grid-template-columns: repeat(3, 1fr); }
+.flow__opts--2 { grid-template-columns: repeat(2, 1fr); }
+.flow__opts button {
+  display: grid;
+  justify-items: center;
+  gap: 2px;
+  padding: 12px 6px;
+  background: var(--bg);
+  border: 1.5px solid var(--muted);
+  color: var(--text-c);
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+}
+.flow__opts button b {
+  font-family: var(--display);
+  font-weight: 700;
+  font-size: 3.25rem;
+  line-height: 0.85;
+  color: var(--ink);
+}
+.flow__opts button:hover { border-color: var(--forest); }
+.flow__opts--2 button { padding: 0 0 8px; overflow: hidden; }
+.flow__opts--2 img { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; margin-bottom: 6px; }
+.flow__opts button[aria-pressed="true"] {
+  border-color: var(--forest);
+  box-shadow: inset 0 0 0 2px var(--forest);
+  background: var(--lemon);
+  color: var(--forest);
+  font-weight: 800;
+}
+.flow__back {
+  display: block;
+  margin: 6px auto 0;
+  min-height: 40px;
+  background: none;
+  border: 0;
+  color: var(--muted);
+  font: inherit;
+  font-size: 0.9375rem;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  cursor: pointer;
+}
+.week { display: grid; grid-template-columns: repeat(4, 1fr); gap: 6px; margin: 0 0 14px; }
+.week img { width: 100%; aspect-ratio: 1; object-fit: cover; }
+
+/* the known names, right where she decides */
+.known { text-align: center; color: var(--cream); }
+.known p { font-size: 0.9375rem; font-weight: 600; margin-bottom: 8px; }
+.known__row { display: flex; justify-content: center; gap: 18px; }
+.known figure { margin: 0; width: 84px; }
+.known img { width: 56px; height: 56px; object-fit: cover; margin-inline: auto; }
+.known figcaption { margin-top: 4px; font-size: 0.8125rem; line-height: 1.25; }
+
+.final__in > .btn { justify-self: center; max-width: 420px; }
+.demo-note { margin: 0 0 14px; font-weight: 800; color: var(--chili); }
+
+@media (min-width: 860px) {
+  .known { grid-column: 1 / -1; }
+}
