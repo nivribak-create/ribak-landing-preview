@@ -1,0 +1,316 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>RIBAK | השבוע את לא מבשלת</title>
+<meta name="description" content="מנות שף טריות ושקולות, עם ערכים תזונתיים על כל מנה, מגיעות אלייך ביום ראשון בבוקר. השאירי פרטים ונחזור אלייך עוד היום.">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#0e3b2c">
+<meta property="og:title" content="RIBAK | השבוע את לא מבשלת">
+<meta property="og:description" content="מנות שף טריות ושקולות, מגיעות אלייך ביום ראשון בבוקר. 10% הנחה על השבוע הראשון.">
+<meta property="og:image" content="assets/og.jpg">
+<meta property="og:type" content="website">
+<link rel="icon" href="assets/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Assistant:wght@400;600;800&family=Karantina:wght@700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<a class="skip" href="#call">דלגי לטופס</a>
+
+<header class="top">
+  <div class="wrap top__in">
+    <img class="top__logo" src="assets/logo.png" alt="RIBAK. טעים, יעיל, בריא" width="121" height="60">
+    <a class="top__link" href="#start">להשארת פרטים</a>
+  </div>
+</header>
+
+<main>
+
+<!-- ============ פתיחה ============ -->
+<section class="hero">
+  <div class="wrap hero__in">
+    <div class="hero__copy">
+      <h1>השבוע את<br>לא מבשלת.</h1>
+      <p class="hero__sub">ביום ראשון בבוקר מחכות לך ליד הדלת הארוחות של כל השבוע. את פותחת מקרר, מחממת 2 עד 4 דקות בתוך הקופסה, ואוכלת. כמה קלוריות וכמה חלבון, כתוב על כל קופסה.</p>
+      <figure class="hero__plate">
+        <img src="assets/dishes/pargit-bbq.jpg" alt="פרגית בגלייז BBQ עם אורז לבן ושעועית ירוקה" width="800" height="534">
+        <figcaption class="hero__off">10% הנחה על השבוע הראשון</figcaption>
+      </figure>
+      <p class="hero__price"><b>מ־<span class="nw">65 ₪</span></b><span>למנה עיקרית, למנויה קבועה. בהזמנה בודדת מ־<span class="nw">69 ₪</span>. השבוע שאחרי הראשון לא נשלח בלי שאמרת כן.</span></p>
+    </div>
+
+    <form class="tag" id="start" data-lead novalidate>
+      <div class="tag__head">
+        <img src="assets/logo.png" alt="" width="89" height="44">
+        <p class="tag__when">המשלוח הקרוב<br><strong data-next-sunday>יום ראשון</strong><br>מאשדוד עד נתניה</p>
+      </div>
+      <div class="tag__body">
+        <h2 class="tag__title">שם וטלפון. <span data-callback>מתקשרים אלייך עוד היום.</span></h2>
+        <label class="field">
+          <span class="field__label">שם</span>
+          <input type="text" name="name" autocomplete="given-name" maxlength="60" required>
+        </label>
+        <label class="field">
+          <span class="field__label">טלפון נייד</span>
+          <input type="tel" name="phone" inputmode="tel" autocomplete="tel" dir="ltr" placeholder="05X-XXXXXXX" maxlength="16" required>
+        </label>
+        <label class="trap" aria-hidden="true">אין למלא<input type="text" name="company" tabindex="-1" autocomplete="off"></label>
+        <p class="tag__error" role="alert" hidden></p>
+        <button class="btn" type="submit">תתקשרו אליי</button>
+        <p class="tag__fine tag__fine--call">מתקשר מישהו מהצוות שלנו, כ־10 דקות בטלפון. לא חייבים להזמין בשיחה כלום.</p>
+        <label class="check">
+          <input type="checkbox" name="consent">
+          <span>לא חובה: אפשר לשלוח לי גם עדכונים והטבות בוואטסאפ</span>
+        </label>
+        <p class="tag__fine">בלי הסימון הזה, המספר שלך משמש רק כדי לחזור אלייך. <a href="https://www.ribakfood.co.il/privacy" target="_blank" rel="noopener">מדיניות פרטיות</a></p>
+      </div>
+      <div class="tag__done" aria-live="polite" hidden>
+        <p class="stamp" aria-hidden="true">נרשם ✓</p>
+        <p class="tag__thanks" data-thanks></p>
+        <p data-thanks-when></p>
+      </div>
+    </form>
+  </div>
+</section>
+
+<!-- ============ המנות ============ -->
+<section class="menu" aria-labelledby="menu-h">
+  <div class="wrap">
+    <h2 id="menu-h">מה יחכה לך במקרר</h2>
+    <p class="menu__lead">על כל קופסה כתוב בדיוק מה יש בה. כמה דוגמאות מהתפריט:</p>
+  </div>
+  <div class="dishes" tabindex="0" role="region" aria-label="מנות מהתפריט, אפשר לגלול הצידה">
+    <article class="dish">
+      <img src="assets/dishes/chicken-dijon.jpg" alt="חזה עוף בזיגוג חרדל ודבש עם אורז לבן ואנטיפסטי" width="800" height="534" loading="lazy">
+      <h3>חזה עוף ״דיז׳ון״ ודבש</h3>
+      <p class="dish__nums"><span><b>551</b> קלוריות</span><span><b>55.9</b> גר׳ חלבון</span></p>
+    </article>
+    <article class="dish">
+      <img src="assets/dishes/salmon.jpg" alt="סלמון בקראסט עשבים עם תפוחי אדמה, בטטה ושעועית ירוקה" width="800" height="534" loading="lazy">
+      <h3>סלמון בקראסט עשבים</h3>
+      <p class="dish__nums"><span><b>535</b> קלוריות</span><span><b>38.2</b> גר׳ חלבון</span></p>
+    </article>
+    <article class="dish">
+      <img src="assets/dishes/chicken-meatballs.jpg" alt="קציצות עוף ברוטב אדום עם פסטה ושעועית ירוקה" width="800" height="534" loading="lazy">
+      <h3>קציצות עוף ברוטב אדום</h3>
+      <p class="dish__nums"><span><b>496</b> קלוריות</span><span><b>51.4</b> גר׳ חלבון</span></p>
+    </article>
+    <article class="dish">
+      <img src="assets/dishes/pargit-yellow-curry.jpg" alt="פרגית בקארי צהוב עם אורז לבן ושעועית ירוקה" width="800" height="534" loading="lazy">
+      <h3>פרגית ״ילו קארי״</h3>
+      <p class="dish__nums"><span><b>596</b> קלוריות</span><span><b>38.3</b> גר׳ חלבון</span></p>
+    </article>
+    <article class="dish">
+      <img src="assets/dishes/bolognese-chicken.jpg" alt="בולונז עוף על פסטה עם אנטיפסטי" width="800" height="534" loading="lazy">
+      <h3>בולונז עוף ״קלסיקו״</h3>
+      <p class="dish__nums"><span><b>501</b> קלוריות</span><span><b>51</b> גר׳ חלבון</span></p>
+    </article>
+    <article class="dish">
+      <img src="assets/dishes/wok.jpg" alt="ווק עוף תאילנדי עם אטריות שעועית וירקות" width="794" height="800" loading="lazy">
+      <h3>ווק עוף תאילנדי</h3>
+      <p class="dish__nums"><span><b>526</b> קלוריות</span><span><b>43</b> גר׳ חלבון</span></p>
+    </article>
+  </div>
+  <div class="wrap">
+    <p class="menu__more">ועוד בתפריט: פרגית בגלייז BBQ, פילה לברק ושרי, קבב ״שוק״, קציצות דג ים פיקנטיות, ראגו בקר, טופו ״גרין קארי״ וסלט ניסואז. מפעם לפעם מצטרפות מנות חדשות.</p>
+  </div>
+</section>
+
+<!-- ============ מי שכבר טעמה ============ -->
+<section class="voices" aria-labelledby="voices-h">
+  <div class="wrap">
+    <h2 id="voices-h">מי שכבר טעמה, מספרת</h2>
+    <p class="voices__lead">שני סרטונים קצרים. הראשון 23 שניות.</p>
+  </div>
+  <div class="reels" tabindex="0" role="region" aria-label="שני סרטונים, אפשר לגלול הצידה">
+    <video controls playsinline preload="none" poster="assets/video/ugc-2.jpg" width="540" height="960" aria-label="סרטון: חלום שמישהו יבשל לנו לכל השבוע">
+      <source src="assets/video/ugc-2.mp4" type="video/mp4">
+    </video>
+    <video controls playsinline preload="none" poster="assets/video/ugc-1.jpg" width="540" height="960" aria-label="סרטון: הקופסה, המדבקה והערכים שעליה">
+      <source src="assets/video/ugc-1.mp4" type="video/mp4">
+    </video>
+  </div>
+  <!-- צילומי מסך של המלצות: להוסיף כאן כשיגיעו לתיקייה assets/reviews -->
+</section>
+
+<!-- ============ ההתנגדויות ============ -->
+<section class="doubts" aria-labelledby="doubts-h">
+  <div class="wrap">
+    <h2 id="doubts-h">מה שבטח עובר לך בראש עכשיו</h2>
+
+    <article class="doubt">
+      <h3 class="doubt__q">״כבר ניסיתי אוכל מוכן. הוא לא היה טעים.״</h3>
+      <div class="doubt__a">
+        <p class="doubt__by">ניב ריבק עונה:</p>
+        <p>אני מכיר את האוכל הזה: חזה עוף יבש ואורז בלי טעם. הקמתי את RIBAK כדי שאוכל בריא יהיה גם טעים.</p>
+        <p>אני שף מגיל 16. את התפריט ואת המתכונים אני בונה בעצמי, ומנה לא נכנסת לתפריט לפני שהיא טעימה לי. מבשלים בשמן זית בלבד, בלי שמני זרעים ובלי חומרים משמרים, במטבח יצרן עם רישיון משרד הבריאות.</p>
+        <p>אין סיבה שתאמיני לי לפני שטעמת. אם תהיה מנה שלא אהבת, תכתבי לנו: נזכה אותך עליה או נחליף אותה.</p>
+      </div>
+    </article>
+
+    <article class="doubt">
+      <h3 class="doubt__q">״זה יקר לי.״</h3>
+      <div class="doubt__a">
+        <p>תפתחי רגע את ההזמנה האחרונה שלך בוולט ותסתכלי על השורה התחתונה, עם המשלוח ודמי השירות. תחזיקי את המספר הזה בראש.</p>
+        <p>מנה עיקרית ב־RIBAK עולה <span class="nw">69 ₪</span> ומעלה, ומנויה קבועה משלמת עליה כ־<span class="nw">65 ₪</span>. במחיר הזה מישהו אחר עשה בשבילך את הקניות, בישל, שקל כל רכיב וארז.</p>
+        <p>משלוח יש אחד בשבוע והוא עולה <span class="nw">55 ₪</span> להזמנה, בין אם הזמנת 3 מנות ובין אם 6. המינימום להזמנה הוא <span class="nw">200 ₪</span>, ושלוש מנות עיקריות כבר עוברות אותו. על השבוע הראשון יש 10% הנחה.</p>
+      </div>
+    </article>
+
+    <article class="doubt">
+      <h3 class="doubt__q">״אני צריכה לחשוב על זה.״</h3>
+      <div class="doubt__a">
+        <p>תחשבי בשקט. רק שעד שלא טעמת, אין לך הרבה על מה.</p>
+        <p>השבוע הראשון הוא הזמנה בודדת. בשבוע שאחריו שום דבר לא נשלח אלייך אוטומטית: אחרי שטעמת אנחנו מתקשרים, ואת מחליטה אם ממשיכים. גם השיחה הראשונה לא מחייבת, ואם יתברר בה ש־RIBAK לא מתאים לך, נגיד לך.</p>
+      </div>
+    </article>
+
+    <p class="doubts__cta"><a class="btn btn--dark" href="#call">תתקשרו אליי</a><span>כ־10 דקות בטלפון. לא חייבים להזמין כלום.</span></p>
+
+    <article class="doubt">
+      <h3 class="doubt__q">״איך אוכל מיום ראשון מחזיק לי את השבוע?״</h3>
+      <div class="doubt__a">
+        <p>מיד אחרי הבישול כל מנה עוברת קירור מהיר (Blast Chilling): מ־70 מעלות ל־4 מעלות בפחות משעה. במקרר ביתי אותה ירידה לוקחת שעות, ובזמן הזה האוכל מאבד מהטריות שלו.</p>
+        <p>בגלל הקירור הזה אין צורך בחומרים משמרים, והלקוחות שלנו אוכלות את המנות לאורך השבוע.</p>
+      </div>
+    </article>
+
+    <article class="doubt">
+      <h3 class="doubt__q">״זה אוכל דיאטה. אני אשאר רעבה.״</h3>
+      <div class="doubt__a">
+        <p>אלה ארוחות בגודל של ארוחה: חלבון, פחמימה וירק בכל קופסה. ברוב מנות העוף והדגים יש 38 עד 56 גרם חלבון, והחלבון הוא מה שהכי משביע בצלחת.</p>
+        <p>במנה יש בין 430 ל־630 קלוריות, והמספר המדויק כתוב על כל קופסה. אין כאן הבטחה על המשקל. יש ארוחה מסודרת שאת יודעת בדיוק מה יש בה, בלי לשקול ובלי לחשב.</p>
+        <p>רוצה יותר? אפשר להוסיף קופסאות של חצי קילו: חלבון, תוספת או ירק.</p>
+      </div>
+    </article>
+
+    <article class="doubt">
+      <h3 class="doubt__q">״אני לא בבית ביום ראשון בבוקר.״</h3>
+      <div class="doubt__a">
+        <p>לא צריך להיות. המשלוח מגיע בין 07:00 ל־10:00, ארוז בשקית עם קרחון, ומחכה לך ליד הדלת.</p>
+        <p>אם נוח לך יותר, אפשר לתאם מראש כתובת אחרת, למשל המשרד.</p>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- ============ איך זה עובד ============ -->
+<section class="steps" aria-labelledby="steps-h">
+  <div class="wrap">
+    <h2 id="steps-h">מהרגע שהשארת פרטים ועד שהמקרר מלא</h2>
+    <ol class="steps__list">
+      <li>
+        <h3>משאירה שם וטלפון</h3>
+        <p>מישהו מהצוות שלנו מתקשר אלייך, בשעה שנוח לך לדבר.</p>
+      </li>
+      <li>
+        <h3>מדברים כ־10 דקות בטלפון</h3>
+        <p>שואלים מה את אוכלת היום ומה היית רוצה שישתנה, ובוחרים יחד את המנות לשבוע הראשון.</p>
+      </li>
+      <li>
+        <h3>יום ראשון בבוקר, המשלוח בדלת</h3>
+        <p>בין 07:00 ל־10:00 מגיעות כל המנות של השבוע. 2 עד 4 דקות במיקרוגל, בתוך הקופסה, ויש ארוחה.</p>
+      </li>
+      <li>
+        <h3>אחרי שטעמת, מחליטים יחד</h3>
+        <p>מתקשרים לשמוע איך היה. אם ממשיכים, מנויה קבועה מקבלת 5% הנחה על כל הזמנה, ויכולה לדלג על שבוע עד יום רביעי ב־23:00.</p>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<!-- ============ שאלות קצרות ============ -->
+<section class="faq" aria-labelledby="faq-h">
+  <div class="wrap">
+    <h2 id="faq-h">עוד כמה שאלות קצרות</h2>
+    <details>
+      <summary>כמה זה עולה בסך הכול?</summary>
+      <p>ניקח שבוע של 4 מנות עיקריות ב־<span class="nw">69 ₪</span>: <span class="nw">276 ₪</span> על המנות ועוד <span class="nw">55 ₪</span> משלוח, <span class="nw">331 ₪</span>. דמי המשלוח נשארים <span class="nw">55 ₪</span> גם אם הזמנת 6 מנות. מחיר מנה נע בין 59 ל־<span class="nw">99 ₪</span> לפי המנה, והמינימום להזמנה הוא <span class="nw">200 ₪</span>. מנויה קבועה מקבלת 5% הנחה על כל הזמנה.</p>
+    </details>
+    <details>
+      <summary>אפשר לשנות רכיבים בתוך מנה?</summary>
+      <p>לא. כל מנה נבנית ונשקלת כהרכב אחד, וזה מה שמאפשר לנו לכתוב עליה ערכים תזונתיים מדויקים ולשמור על אותו טעם בכל שבוע. את בוחרת אילו מנות יגיעו אלייך, ואם חסר לך משהו אפשר להוסיף קופסאות של חצי קילו של חלבון, תוספת או ירק.</p>
+    </details>
+    <details>
+      <summary>איך מדלגים על שבוע או עוצרים?</summary>
+      <p>בפורטל המנויות, עד יום רביעי ב־23:00. לפני כן נשלחת אלייך הודעת תזכורת, כך שלא יוצא משלוח שלא רצית.</p>
+    </details>
+    <details>
+      <summary>יש לי אלרגיה או רגישות למזון.</summary>
+      <p>חשוב שתדעי: המטבח שלנו לא מותאם לאלרגיות ואינו נקי מאלרגנים. אם יש לך אלרגיה או רגישות, ספרי לנו בשיחה לפני שמזמינים.</p>
+    </details>
+    <details>
+      <summary>לאן אתם מגיעים?</summary>
+      <p>לכל האזור שבין אשדוד לנתניה, ולא מזרחית מראש העין. אם את לא בטוחה שהכתובת שלך בפנים, השאירי פרטים ונבדוק.</p>
+    </details>
+  </div>
+</section>
+
+<!-- ============ סיום ============ -->
+<section class="final" id="call" aria-labelledby="final-h">
+  <div class="wrap final__in">
+    <div class="final__copy">
+      <h2 id="final-h">שבוע אחד.<br>אחר כך תחליטי.</h2>
+      <p>השאירי שם וטלפון, ונדבר כ־10 דקות בטלפון. אם תרצי, המשלוח הראשון שלך יגיע ביום ראשון עם 10% הנחה.</p>
+    </div>
+
+    <form class="tag" data-lead novalidate>
+      <div class="tag__head">
+        <img src="assets/logo.png" alt="" width="89" height="44">
+        <p class="tag__when">המשלוח הקרוב<br><strong data-next-sunday>יום ראשון</strong><br>מאשדוד עד נתניה</p>
+      </div>
+      <div class="tag__body">
+        <h3 class="tag__title">שם וטלפון. <span data-callback>מתקשרים אלייך עוד היום.</span></h3>
+        <label class="field">
+          <span class="field__label">שם</span>
+          <input type="text" name="name" autocomplete="given-name" maxlength="60" required>
+        </label>
+        <label class="field">
+          <span class="field__label">טלפון נייד</span>
+          <input type="tel" name="phone" inputmode="tel" autocomplete="tel" dir="ltr" placeholder="05X-XXXXXXX" maxlength="16" required>
+        </label>
+        <label class="trap" aria-hidden="true">אין למלא<input type="text" name="company" tabindex="-1" autocomplete="off"></label>
+        <p class="tag__error" role="alert" hidden></p>
+        <button class="btn" type="submit">תתקשרו אליי</button>
+        <p class="tag__fine tag__fine--call">מתקשר מישהו מהצוות שלנו, כ־10 דקות בטלפון. לא חייבים להזמין בשיחה כלום.</p>
+        <label class="check">
+          <input type="checkbox" name="consent">
+          <span>לא חובה: אפשר לשלוח לי גם עדכונים והטבות בוואטסאפ</span>
+        </label>
+        <p class="tag__fine">בלי הסימון הזה, המספר שלך משמש רק כדי לחזור אלייך. <a href="https://www.ribakfood.co.il/privacy" target="_blank" rel="noopener">מדיניות פרטיות</a></p>
+      </div>
+      <div class="tag__done" aria-live="polite" hidden>
+        <p class="stamp" aria-hidden="true">נרשם ✓</p>
+        <p class="tag__thanks" data-thanks></p>
+        <p data-thanks-when></p>
+      </div>
+    </form>
+  </div>
+</section>
+
+</main>
+
+<footer class="foot">
+  <div class="wrap foot__in">
+    <p>ריבק, עוסק מספר 319126512. אצ״ל 6, ראשון לציון.</p>
+    <p class="foot__links">
+      <a href="https://www.ribakfood.co.il/terms" target="_blank" rel="noopener">תקנון</a>
+      <a href="https://www.ribakfood.co.il/privacy" target="_blank" rel="noopener">מדיניות פרטיות</a>
+      <a href="https://www.ribakfood.co.il/accessibility" target="_blank" rel="noopener">הצהרת נגישות</a>
+      <a href="https://www.instagram.com/ribak.food/" target="_blank" rel="noopener">אינסטגרם</a>
+    </p>
+  </div>
+</footer>
+
+<a class="dock" href="#call" data-dock>
+  <span>10% הנחה על השבוע הראשון</span>
+  <strong>תתקשרו אליי</strong>
+</a>
+
+<script src="main.js" defer></script>
+</body>
+</html>
