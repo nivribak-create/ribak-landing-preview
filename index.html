@@ -24,7 +24,6 @@
 <header class="top">
   <div class="wrap top__in">
     <img class="top__logo" src="assets/logo.png" alt="RIBAK. טעים, יעיל, בריא" width="121" height="60">
-    <a class="top__link" href="#start">להשארת פרטים</a>
   </div>
 </header>
 
@@ -33,47 +32,52 @@
 <!-- ============ פתיחה ============ -->
 <section class="hero">
   <div class="wrap hero__in">
-    <div class="hero__copy">
-      <h1>השבוע את<br>לא מבשלת.</h1>
-      <p class="hero__sub">ביום ראשון בבוקר מחכות לך ליד הדלת הארוחות של כל השבוע. את פותחת מקרר, מחממת 2 עד 4 דקות בתוך הקופסה, ואוכלת. כמה קלוריות וכמה חלבון, כתוב על כל קופסה.</p>
-      <figure class="hero__plate">
-        <img src="assets/dishes/pargit-bbq.jpg" alt="פרגית בגלייז BBQ עם אורז לבן ושעועית ירוקה" width="800" height="534">
-        <figcaption class="hero__off">10% הנחה על השבוע הראשון</figcaption>
-      </figure>
-      <p class="hero__price"><b>מ־<span class="nw">65 ₪</span></b><span>למנה עיקרית, למנויה קבועה. בהזמנה בודדת מ־<span class="nw">69 ₪</span>. השבוע שאחרי הראשון לא נשלח בלי שאמרת כן.</span></p>
+    <div class="hero__lead">
+      <button class="adq" type="button" data-adq hidden>
+        <img class="adq__img" data-adq-img alt="" width="56" height="56">
+        <span class="adq__body"><span class="adq__q" data-adq-q></span><span class="adq__src" data-adq-src></span></span>
+        <svg class="adq__play" viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M10 8.5v7l6-3.5z"/></svg>
+      </button>
+      <h1>השבוע את לא מבשלת.</h1>
+      <p class="hero__offer"><b>10% הנחה</b> על השבוע הראשון. בלי התחייבות.</p>
     </div>
 
     <form class="tag" id="start" data-lead novalidate>
-      <div class="tag__head">
-        <img src="assets/logo.png" alt="" width="89" height="44">
-        <p class="tag__when">המשלוח הקרוב<br><strong data-next-sunday>יום ראשון</strong><br>מאשדוד עד נתניה</p>
-      </div>
       <div class="tag__body">
-        <h2 class="tag__title">שם וטלפון. <span data-callback>מתקשרים אלייך עוד היום.</span></h2>
         <label class="field">
           <span class="field__label">שם</span>
-          <input type="text" name="name" autocomplete="given-name" maxlength="60" required>
+          <input type="text" name="name" autocomplete="given-name" autocapitalize="words" enterkeyhint="next" maxlength="60" required>
         </label>
         <label class="field">
           <span class="field__label">טלפון נייד</span>
-          <input type="tel" name="phone" inputmode="tel" autocomplete="tel" dir="ltr" placeholder="05X-XXXXXXX" maxlength="16" required>
+          <input type="tel" name="phone" inputmode="tel" autocomplete="tel" enterkeyhint="send" dir="ltr" placeholder="05X-XXXXXXX" maxlength="16" required>
         </label>
         <label class="trap" aria-hidden="true">אין למלא<input type="text" name="rbk_check" tabindex="-1" autocomplete="off" data-lpignore="true" data-1p-ignore></label>
         <p class="tag__error" role="alert" hidden></p>
-        <button class="btn" type="submit">תתקשרו אליי</button>
-        <p class="tag__fine tag__fine--call">מתקשר מישהו מהצוות שלנו, כ־10 דקות בטלפון. לא חייבים להזמין בשיחה כלום.</p>
-        <label class="check">
-          <input type="checkbox" name="consent">
-          <span>לא חובה: אפשר לשלוח לי גם עדכונים והטבות בוואטסאפ</span>
-        </label>
-        <p class="tag__fine">בלי הסימון הזה, המספר שלך משמש רק כדי לחזור אלייך. <a href="https://www.ribakfood.co.il/privacy" target="_blank" rel="noopener">מדיניות פרטיות</a></p>
+        <button class="btn" type="submit">אני רוצה 10% על השבוע הראשון</button>
+        <p class="tag__fine tag__fine--call"><span data-callback>נחזור אלייך עוד היום</span> לשיחה של כ־10 דקות. לא חייבים להזמין כלום.</p>
+        <p class="tag__deadline" data-deadline hidden></p>
+        <!-- המלצה אמיתית של לקוחה: להוסיף כאן צילום מסך אחד כשניב ישלח (assets/reviews) -->
+        <p class="tag__fine">משלוחים מאשדוד עד נתניה. המספר שלך משמש רק כדי לחזור אלייך. <a href="https://www.ribakfood.co.il/privacy" target="_blank" rel="noopener">מדיניות פרטיות</a></p>
       </div>
       <div class="tag__done" aria-live="polite" hidden>
         <p class="stamp" aria-hidden="true">נרשם ✓</p>
         <p class="tag__thanks" data-thanks></p>
         <p data-thanks-when></p>
+        <div class="tag__wa" data-wa>
+          <p>רוצה לקבל מאיתנו גם עדכונים והטבות בוואטסאפ?</p>
+          <button class="btn btn--line" type="button" data-wa-yes>כן, שלחו לי</button>
+        </div>
       </div>
     </form>
+
+    <div class="hero__more">
+      <p class="hero__sub">ביום ראשון בבוקר מחכות לך ליד הדלת הארוחות של כל השבוע. את פותחת מקרר, מחממת כשתי דקות בתוך הקופסה, ואוכלת. כמה קלוריות וכמה חלבון, כתוב על כל קופסה.</p>
+      <figure class="hero__plate">
+        <img src="assets/dishes/pargit-bbq.jpg" alt="פרגית בגלייז BBQ עם אורז לבן ושעועית ירוקה" width="800" height="534" loading="lazy">
+      </figure>
+      <p class="hero__price"><b><span class="nw">מ־65 ₪</span></b><span>למנה עיקרית, למנויה קבועה. בהזמנה בודדת מ־<span class="nw">69 ₪</span>. השבוע שאחרי הראשון לא נשלח בלי שאמרת כן.</span></p>
+    </div>
   </div>
 </section>
 
@@ -169,7 +173,7 @@
       </div>
     </article>
 
-    <p class="doubts__cta"><a class="btn btn--dark" href="#call">תתקשרו אליי</a><span>כ־10 דקות בטלפון. לא חייבים להזמין כלום.</span></p>
+    <p class="doubts__cta"><a class="btn btn--dark" href="#call">אני רוצה 10% על השבוע הראשון</a><span>נחזור אלייך לשיחה של כ־10 דקות. לא חייבים להזמין כלום.</span></p>
 
     <article class="doubt">
       <h3 class="doubt__q">״איך אוכל מיום ראשון מחזיק לי את השבוע?״</h3>
@@ -205,7 +209,7 @@
     <ol class="steps__list">
       <li>
         <h3>משאירה שם וטלפון</h3>
-        <p>מישהו מהצוות שלנו מתקשר אלייך, בשעה שנוח לך לדבר.</p>
+        <p>מישהו מהצוות שלנו חוזר אלייך, בשעה שנוח לך לדבר.</p>
       </li>
       <li>
         <h3>מדברים כ־10 דקות בטלפון</h3>
@@ -213,7 +217,7 @@
       </li>
       <li>
         <h3>יום ראשון בבוקר, המשלוח בדלת</h3>
-        <p>בין 07:00 ל־10:00 מגיעות כל המנות של השבוע. 2 עד 4 דקות במיקרוגל, בתוך הקופסה, ויש ארוחה.</p>
+        <p>בין 07:00 ל־10:00 מגיעות כל המנות של השבוע. כשתי דקות במיקרוגל, בתוך הקופסה, ויש ארוחה.</p>
       </li>
       <li>
         <h3>אחרי שטעמת, מחליטים יחד</h3>
@@ -259,34 +263,31 @@
     </div>
 
     <form class="tag" data-lead novalidate>
-      <div class="tag__head">
-        <img src="assets/logo.png" alt="" width="89" height="44">
-        <p class="tag__when">המשלוח הקרוב<br><strong data-next-sunday>יום ראשון</strong><br>מאשדוד עד נתניה</p>
-      </div>
       <div class="tag__body">
-        <h3 class="tag__title">שם וטלפון. <span data-callback>מתקשרים אלייך עוד היום.</span></h3>
         <label class="field">
           <span class="field__label">שם</span>
-          <input type="text" name="name" autocomplete="given-name" maxlength="60" required>
+          <input type="text" name="name" autocomplete="given-name" autocapitalize="words" enterkeyhint="next" maxlength="60" required>
         </label>
         <label class="field">
           <span class="field__label">טלפון נייד</span>
-          <input type="tel" name="phone" inputmode="tel" autocomplete="tel" dir="ltr" placeholder="05X-XXXXXXX" maxlength="16" required>
+          <input type="tel" name="phone" inputmode="tel" autocomplete="tel" enterkeyhint="send" dir="ltr" placeholder="05X-XXXXXXX" maxlength="16" required>
         </label>
         <label class="trap" aria-hidden="true">אין למלא<input type="text" name="rbk_check" tabindex="-1" autocomplete="off" data-lpignore="true" data-1p-ignore></label>
         <p class="tag__error" role="alert" hidden></p>
-        <button class="btn" type="submit">תתקשרו אליי</button>
-        <p class="tag__fine tag__fine--call">מתקשר מישהו מהצוות שלנו, כ־10 דקות בטלפון. לא חייבים להזמין בשיחה כלום.</p>
-        <label class="check">
-          <input type="checkbox" name="consent">
-          <span>לא חובה: אפשר לשלוח לי גם עדכונים והטבות בוואטסאפ</span>
-        </label>
-        <p class="tag__fine">בלי הסימון הזה, המספר שלך משמש רק כדי לחזור אלייך. <a href="https://www.ribakfood.co.il/privacy" target="_blank" rel="noopener">מדיניות פרטיות</a></p>
+        <button class="btn" type="submit">אני רוצה 10% על השבוע הראשון</button>
+        <p class="tag__fine tag__fine--call"><span data-callback>נחזור אלייך עוד היום</span> לשיחה של כ־10 דקות. לא חייבים להזמין כלום.</p>
+        <p class="tag__deadline" data-deadline hidden></p>
+        <!-- המלצה אמיתית של לקוחה: להוסיף כאן צילום מסך אחד כשניב ישלח (assets/reviews) -->
+        <p class="tag__fine">משלוחים מאשדוד עד נתניה. המספר שלך משמש רק כדי לחזור אלייך. <a href="https://www.ribakfood.co.il/privacy" target="_blank" rel="noopener">מדיניות פרטיות</a></p>
       </div>
       <div class="tag__done" aria-live="polite" hidden>
         <p class="stamp" aria-hidden="true">נרשם ✓</p>
         <p class="tag__thanks" data-thanks></p>
         <p data-thanks-when></p>
+        <div class="tag__wa" data-wa>
+          <p>רוצה לקבל מאיתנו גם עדכונים והטבות בוואטסאפ?</p>
+          <button class="btn btn--line" type="button" data-wa-yes>כן, שלחו לי</button>
+        </div>
       </div>
     </form>
   </div>
@@ -306,10 +307,15 @@
   </div>
 </footer>
 
-<a class="dock" href="#call" data-dock>
+<a class="dock" href="#start" data-dock>
   <span>10% הנחה על השבוע הראשון</span>
-  <strong>תתקשרו אליי</strong>
+  <strong>אני רוצה</strong>
 </a>
+
+<dialog class="player" data-player aria-label="הסרטון מהמודעה">
+  <button class="player__x" type="button" data-player-close aria-label="סגירת הסרטון">סגירה</button>
+  <div data-player-slot></div>
+</dialog>
 
 <script src="main.js" defer></script>
 </body>
