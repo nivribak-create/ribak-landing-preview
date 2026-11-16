@@ -171,7 +171,7 @@
   }
 
   // ---- forms ---------------------------------------------------------------
-  var BUTTON = 'אני רוצה 10% על השבוע הראשון';
+  var BUTTON = 'אני רוצה לנסות שבוע אחד';
   var forms = document.querySelectorAll('form[data-lead]');
   var dock = document.querySelector('[data-dock]');
   var sent = null; // what was sent, kept for the WhatsApp question on the thank-you
@@ -218,6 +218,12 @@
       var payload = attribution();
       payload.name = name;
       payload.phone = phone;
+      // The optional one-tap answers travel in the note the rep reads before calling.
+      var tried = form.querySelector('input[name=tried]:checked');
+      var when = form.querySelector('input[name=when]:checked');
+      if (tried) payload.notes += ' · הזמינה בעבר ארוחות מוכנות: ' + tried.value;
+      if (when) payload.notes += ' · נוח לה לדבר: ' + when.value;
+      payload.notes = payload.notes.slice(0, 480);
       // Marketing messages are asked about on the thank-you, after she is in.
       payload.consent = false;
       // The bot trap. Its name must not be one a browser's autofill recognises
