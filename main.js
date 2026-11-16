@@ -172,7 +172,9 @@
       payload.name = name;
       payload.phone = phone;
       payload.consent = !!form.elements.consent.checked;
-      payload.company = form.elements.company.value; // stays empty for a person
+      // The bot trap. Its name must not be one a browser's autofill recognises
+      // ("company" was, and real leads were dropped), and it stays empty for a person.
+      payload.hp = form.elements.rbk_check.value;
 
       btn.disabled = true;
       btn.textContent = 'שולחת…';
