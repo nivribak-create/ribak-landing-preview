@@ -6,8 +6,8 @@
   var CONFIG = {
     // Where a lead is sent. This is the CRM's public form endpoint.
     endpoint: 'https://blanchedalmond-yak-848858.hostingersite.com/api/public/lead',
-    // Meta pixel id (digits only). Left empty, no pixel code is loaded.
-    pixelId: ''
+    // Meta pixel id (digits only): the same pixel as ribakfood.co.il. Left empty, no pixel code is loaded.
+    pixelId: '1464953784867877'
   };
 
   var params = new URLSearchParams(location.search);
@@ -172,7 +172,8 @@
         forms.forEach(function (f) { showDone(f, name); });
         form.querySelector('.tag__done').focus();
         if (dock) dock.remove();
-        if (window.fbq) window.fbq('track', 'Lead');
+        // a preview submission (?demo=1) is not a lead and must not be counted as one
+        if (window.fbq && !DEMO) window.fbq('track', 'Lead');
       }).catch(function () {
         btn.disabled = false;
         btn.textContent = 'תתקשרו אליי';
