@@ -344,6 +344,8 @@ h2 {
   background: #000;
   scroll-snap-align: start;
 }
+/* stories recorded from Instagram are a little squarer: shown whole, not cropped */
+.reels video.story { object-fit: contain; background: var(--forest); }
 
 /* ---------- questions ---------- */
 .qa { padding-block: 48px 44px; }
@@ -493,7 +495,7 @@ h2 {
   .dishes, .reels { max-width: var(--max); margin-inline: auto; overflow: visible; }
   .dishes { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px 24px; }
   .dish { max-width: none; }
-  .reels { justify-content: center; gap: 24px; }
+  .reels { justify-content: center; flex-wrap: wrap; gap: 24px; }
   .reels video { flex: 0 0 270px; width: 270px; min-width: 0; max-width: none; }
 
   .qa { padding-block: 72px 60px; }
